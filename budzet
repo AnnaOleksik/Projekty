@@ -1,8 +1,10 @@
-echo "# Projekty" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/AnnaOleksik/Projekty.git
-git push -u origin main
-                echo "# Projekty" >> README.md
+suma = 0
+budzet = float(input("Podaj miesięczny budżet: "))
+wydatek=float(input("Podaj wydatek: "))
+while wydatek != 0:
+    suma += wydatek
+    wydatek = float(input("Podaj wartość kolejnego wydatku lub napisz 0,zeby zakończyć wprowadzanie"))
+    
+roznica = budzet - suma #poza pętlą
+print("Suma wydatków to{} \nTwój bilans miesięczny to {}".format(suma,roznica))
+
