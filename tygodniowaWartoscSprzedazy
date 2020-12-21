@@ -4,5 +4,5 @@ listaDniTygodnia = ["poniedziałku", "wtorku", "środy", "czwartku", "piątku", 
 for i in range(6):
     wartoscSprzedazy = float(input("Podaj wartość sprzedaży dla {}: ".format(listaDniTygodnia[i])))
     L.append(wartoscSprzedazy)
-    suma+=wartoscSprzedazy
+    suma += wartoscSprzedazy
 print("Wyniki poszczególnych dni {}.\nWartość całkowita sprzedaży w tym tygodniu to {} zl.".format(L,suma))
