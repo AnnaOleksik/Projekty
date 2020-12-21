@@ -1,8 +1,8 @@
-L=[]
-suma=0
-listaDniTygodnia=["poniedziałku", "wtorku", "środy", "czwartku", "piątku", "soboty"]
+L = []
+suma = 0
+listaDniTygodnia = ["poniedziałku", "wtorku", "środy", "czwartku", "piątku", "soboty"]
 for i in range(6):
-    wartoscSprzedazy=float(input("Podaj wartość sprzedaży dla {}: ".format(listaDniTygodnia[i])))
+    wartoscSprzedazy = float(input("Podaj wartość sprzedaży dla {}: ".format(listaDniTygodnia[i])))
     L.append(wartoscSprzedazy)
     suma+=wartoscSprzedazy
-print("Winiki poszczególnych dni {}.\nWartość całkowita sprzedaży w tym tygodniu to {} zl.".format(L,suma))
+print("Wyniki poszczególnych dni {}.\nWartość całkowita sprzedaży w tym tygodniu to {} zl.".format(L,suma))
