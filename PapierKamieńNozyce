@@ -1,0 +1,28 @@
+
+#importowanie bibliotek
+import random
+
+#wejscie
+wyborUzytkownika = input("Podaj swój wybór: papier, nożyce czy kamień: ")
+wylosowany=random.randint(1,3)
+
+
+#przetwarzanie
+slownik = {1: "kamień",2: 'papier',3: 'nożyce'}#tlumaczy wylosowana liczbe na odpowiadajace jej slowo
+wyborKomputera=slownik[wylosowany]
+
+
+wygral_uzytkownik = [("papier","kamień"),("nożyce","papier"),("kamień","nożyce")]
+
+while wyborUzytkownika == wyborKomputera:
+    wynik = "remis"
+    wyborUzytkownika = input("Ty: {}\nKomputer: {}\n{}\n Zremisowales.Podaj nowy wybór: papier, nożyce czy kamień".format(wyborUzytkownika,wyborKomputera,wynik))
+    wyborKomputera=slownik[random.randint(1,3)]
+      
+if (wyborUzytkownika,wyborKomputera) in wygral_uzytkownik:
+    wynik = "wygrana"
+else:
+    wynik = "przegrana"
+
+#wyjscie
+print("Ty: {}\nKomputer: {}\n{}".format(wyborUzytkownika,wyborKomputera,wynik))
