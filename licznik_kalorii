@@ -1,0 +1,18 @@
+def main():
+    gramy_tluszczu = float(input("Podaj ile zjadłeś gramów tłuszczu?: "))
+    gramy_weglowodanow =float(input("Podaj ile zjadłeś gramów tłuszczu?: "))
+
+    print("Kalorie w tłuszczu: {0:.1f} \nKalorie w weglowodanach: {1:.1f}."\
+          .format(kalorie_w_tluszczu(gramy_tluszczu),\
+                  kalorie_w_weglowodanach(gramy_weglowodanow)))
+
+
+def kalorie_w_tluszczu(gramy_tluszczu):
+    kalorie_w_tluszczu=gramy_tluszczu*9
+    return kalorie_w_tluszczu
+
+def kalorie_w_weglowodanach(gramy_weglowodanow):
+    kalorie_w_weglowodanach = gramy_weglowodanow * 4
+    return kalorie_w_weglowodanach 
+
+main()
