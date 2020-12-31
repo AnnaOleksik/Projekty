@@ -1,6 +1,6 @@
 def main():
     gramy_tluszczu = float(input("Podaj ile zjadłeś gramów tłuszczu?: "))
-    gramy_weglowodanow =float(input("Podaj ile zjadłeś gramów tłuszczu?: "))
+    gramy_weglowodanow =float(input("Podaj ile zjadłeś gramów węglowodanów?: "))
 
     print("Kalorie w tłuszczu: {0:.1f} \nKalorie w weglowodanach: {1:.1f}."\
           .format(kalorie_w_tluszczu(gramy_tluszczu),\
