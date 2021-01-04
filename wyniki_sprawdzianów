@@ -1,0 +1,32 @@
+def main ():
+    lista=[]
+    for i in range (5):
+        wynik=int(input("Podaj wynik z {} sprawdzianu: ".format(i+1)))
+        while determine_Grade(wynik) == -1:
+            wynik=int(input("Niepoprawny wynik. Powinien być w zakresie 0-100.Podaj wynik z {} sprawdzianu: ".format(i+1)))
+        lista.append(wynik)
+        print("Ocena z {} sprawdzianu to: {} ".format(i+1,determine_Grade(wynik)))
+    print("Srednia ze sprawdzianów {}".format(calc_average(lista)))
+    
+def determine_Grade(wynik):
+    if wynik < 0 or wynik > 100:
+        return -1
+    elif wynik >= 90:
+        return  5
+    elif wynik >= 80:
+        return 4
+    elif wynik >= 70:
+        return 3
+    elif wynik >= 60:
+        return 2
+    else:
+        return 1
+
+       
+def calc_average(lista):
+    suma=0
+    for element in lista:
+        suma += element
+    return suma/len(lista)
+
+main()
